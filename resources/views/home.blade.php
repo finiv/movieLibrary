@@ -9,7 +9,7 @@
                         <h2>Contact me</h2>
                     </div>
                     <div class="card-body">
-                        <contact-form></contact-form>
+                        <register-form></register-form>
                     </div>
                 </div>
             </div>

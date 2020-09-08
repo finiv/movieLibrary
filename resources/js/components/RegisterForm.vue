@@ -9,16 +9,16 @@
             <input type="email" class="form-control" name="email" id="email" />
         </div>
         <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" name="message" id="message" rows="5"></textarea>
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" rows="5" />
         </div>
-        <button type="submit" class="btn btn-primary">Send message</button>
+        <button type="submit" class="btn btn-primary">Register</button>
     </form>
 </template>
 
 <script>
     export default {
-        name: "ContactForm"
+        name: "RegisterForm"
     }
 </script>
 

@@ -20,7 +20,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 /* Register new component: */
-Vue.component('contact-form', require('./components/ContactForm.vue').default);
+Vue.component('register-form', require('./components/RegisterForm.vue').default);
+Vue.component('multiselect', require('./components/Form/Multiselect.vue').default);
 
 const app = new Vue({
     el: '#app'
