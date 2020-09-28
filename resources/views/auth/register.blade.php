@@ -1,8 +1,3 @@
-@php
-    $options = [
-        1,2,3
-    ];
-@endphp
 @extends('layouts.app')
 
 @section('content')
@@ -15,7 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        <multiselect></multiselect>
+                        <register-form></register-form>
                     </form>
                 </div>
             </div>

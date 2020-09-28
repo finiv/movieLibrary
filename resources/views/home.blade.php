@@ -9,7 +9,8 @@
                         <h2>Contact me</h2>
                     </div>
                     <div class="card-body">
-                        <register-form></register-form>
+{{--                        <register-form></register-form>--}}
+                        <multiselect></multiselect>
                     </div>
                 </div>
             </div>

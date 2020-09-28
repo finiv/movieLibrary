@@ -21,8 +21,15 @@ window.Vue = require('vue');
 
 /* Register new component: */
 Vue.component('register-form', require('./components/RegisterForm.vue').default);
-Vue.component('multiselect', require('./components/Form/Multiselect.vue').default);
+Vue.component('app_select', require('./components/Form/AppSelect.vue').default);
+Vue.component('multiselect', Multiselect);
+
+import app_select from './components/Form/AppSelect';
+import Multiselect from 'vue-multiselect';
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+        app_select,
+    }
 });

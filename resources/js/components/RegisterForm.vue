@@ -12,16 +12,27 @@
             <label for="password">Password</label>
             <input type="password" class="form-control" name="password" id="password" rows="5" />
         </div>
+        <div class="row">
+            <app_select :classes="'m-l-15'" :multiple="true" :options="['qwe', 'rty', 'yui']"></app_select>
+        </div>
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
 </template>
 
 <script>
+    import app_select from './Form/AppSelect';
+
     export default {
-        name: "RegisterForm"
+        name: "RegisterForm",
+        components: {
+            app_select
+        }
     }
+
 </script>
 
 <style scoped>
-
+    button {
+        margin: 5px;
+    }
 </style>
