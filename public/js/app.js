@@ -1914,7 +1914,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "app_select",
   props: {
@@ -1967,11 +1966,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RegisterForm",
   components: {
     app_select: _Form_AppSelect__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      genres: []
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('api/genres/genres').then(function (response) {
+      _this.genres = response.data;
+    });
   }
 });
 
@@ -38257,12 +38270,10 @@ var render = function() {
     "div",
     { class: this.classes },
     [
-      _c("p", [_vm._v(_vm._s(this.classes))]),
-      _vm._v(" "),
       _c("multiselect", {
         class: this.classes,
         attrs: {
-          options: _vm.options,
+          options: this.$props.options,
           "close-on-select": false,
           multiple: true
         },
@@ -38300,33 +38311,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("form", [
-    _vm._m(0),
-    _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
-    _vm._m(2),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      [
-        _c("app_select", {
-          attrs: {
-            classes: "m-l-15",
-            multiple: true,
-            options: ["qwe", "rty", "yui"]
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "button",
-      { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-      [_vm._v("Register")]
-    )
+  return _c("div", [
+    _c("form", [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "row" },
+        [
+          _c("app_select", {
+            attrs: { classes: "m-l-15", multiple: true, options: this.genres }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+        [_vm._v("Register")]
+      )
+    ])
   ])
 }
 var staticRenderFns = [

@@ -1,6 +1,6 @@
 <template>
     <div :class="this.classes">
-        <multiselect :class="this.classes" v-model="value" :options="this.options" :close-on-select="false" :multiple="true"></multiselect>
+        <multiselect :class="this.classes" v-model="value" :options="this.$props.options" :close-on-select="false" :multiple="true"></multiselect>
     </div>
 </template>
 

@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
 
-Route::namespace('Api')->group(function () {
-    Route::get('/genres', 'GenreController@index')->name('genres');
+Route::group(['middleware' => 'web'], function () {
+    Route::prefix('genres')->name('genres.')->group(function() {
+        Route::get('/genres', 'GenreController@index')->name('index');
+    });
 });

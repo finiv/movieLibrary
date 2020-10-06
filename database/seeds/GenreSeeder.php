@@ -13,7 +13,7 @@ class GenreSeeder extends Seeder
     public function run()
     {
         $genres = [
-            'Action'.
+            'Action',
             'Adventure',
             'Comedy',
             'Crime',

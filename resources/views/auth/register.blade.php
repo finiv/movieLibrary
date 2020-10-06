@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@php
+@endphp
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -10,7 +12,8 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-                        <register-form></register-form>
+                        <register-form
+                        ></register-form>
                     </form>
                 </div>
             </div>
